@@ -101,3 +101,27 @@ Given your entry of Z to quit, your program should then exit.
 ```csharp
   WriteLine("This is an example: {0}", value.ToString("C", CultureInfo.GetCultureInfo("en-US")));
 ```
+
+### Here is a flowchart for the logic:  
+<!-- below from https://github.com/mermaid-js/mermaid -->
+```mermaid
+flowchart TB
+A["Display  #quot;Enter number of contestants >>  #quot;\n in the console"] --> B[Get input from the user.];
+B --> C{Is the entry less than 0 or more than 30?};
+C --> |Yes| D["Display  #quot;Number must be between 0 and 30\nEnter number of contestants >> #quot; "];
+D --> B
+C --> |No| E["Display  #quot;Enter contestant name >>  #quot;"];
+E --> F[Get input from the user.];
+F --> G["Display  <br>#quot;Talent codes are:<br>&nbsp;&nbsp;S&nbsp;&nbsp;&nbsp;Singing<br>&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;Dancing<br>&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;Musical instrument<br>&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;Other<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter talent code >> #quot;"];
+G --> H[Get input from the user.];
+H -->|For each of entered contestants|E
+H --> I["Display  #quot;Enter a talent type or Z to quit >>#quot;"];
+I --> J[Get input from the user.];
+J --> K{Is the entry 'Z'?};
+K --> |Yes| L["Exit the program"];
+K --> |No| M{Does the entry match and entered talent code?};
+M --> |Yes| N["Display  #quot;Contestants with talent 'Searched Talent Here' are:<br> 'Matching User Name Here'<br><br>Enter a talent type or Z to quit >>#quot;"];
+M --> |No| O["Display  #quot;Contestants with talent 'Searched Talent Here' are:<br> No contestants had talent 'Searched Talent Here'<br><br>Enter a talent type or Z to quit >>#quot;"];
+N --> K
+O --> K
+```
