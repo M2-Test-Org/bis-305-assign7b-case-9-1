@@ -64,13 +64,17 @@ class GreenvilleRevenue
 
         //(9)After data entry is complete, the program displays the valid talent categories and then continuously prompts the user for talent codes and displays the names of all contestants in the category. 
         //Here, as with the getContestantData method, you need the contestant number and the Contestant array to be passed in the getLists method
+        //***********************************
         //your code here
+        //***********************************
     }
 
     //5 Refactor the getContestantNumber method removing the "when" input param and its use
     public static int getContestantNumber(int min, int max)
     {
+        //***********************************
         //your code here
+        //***********************************
         //(6)The program continues to prompt the user until a valid value is entered.
 
         //this return statement is temporary to allow the project to build and be debugged
@@ -99,7 +103,9 @@ class GreenvilleRevenue
         char talent;
         while (x < numThisYear)
         {
+            //***********************************
             //your code here
+            //***********************************
         }
     }
 
@@ -129,7 +135,9 @@ class GreenvilleRevenue
             }
             else
             {
+                //***********************************
                 //your code here
+                //***********************************
             }
         }
     }
@@ -169,8 +177,9 @@ class Contestant
         {
             //3b
             //The set accessor for the code assigns a code only if it is valid (See on page 369 #4 of the You Do It section). Also, use a for loop to iterate the talentCodes array 
-
+            //***********************************
             //your code here
+            //***********************************
         }
     }
 
